@@ -1,4 +1,4 @@
-# Firewall scripts for RHEL & CentOS
+# Firewall scripts for Red Hat Enterprise Linux & CentOS
 
 (c) Niki Kovacs 2019 
 
@@ -29,6 +29,12 @@ You'll want to add some basic services like DNS, web, mail, etc. Check out a
 section marked `# Add various services here #` in the script. The respective
 `services` subdirectories provide template stubs for the most common services,
 which you can copy and paste into the script. 
+
+Check out the section marked `# Add various services here #` in the script.
+You'll probably want to add services like DNS, web, mail, proxy, file sharing,
+directory services, etc. The respective `services` subdirectories provide
+template stubs for the most common services, which you can copy and paste into
+the script. 
 
 Start the firewall:
 
