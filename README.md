@@ -25,16 +25,11 @@ Choose the directory most suited to your configuration (`public`, `router` or
 Edit the handful of variables at the beginning of the `firewall.sh`script to
 adapt it to your network configuration.
 
-You'll want to add some basic services like DNS, web, mail, etc. Check out a
-section marked `# Add various services here #` in the script. The respective
-`services` subdirectories provide template stubs for the most common services,
-which you can copy and paste into the script. 
-
-Check out the section marked `# Add various services here #` in the script.
-You'll probably want to add services like DNS, web, mail, proxy, file sharing,
-directory services, etc. The respective `services` subdirectories provide
-template stubs for the most common services, which you can copy and paste into
-the script. 
+Next, check out the section marked `# Add various services here #` in the
+script. You'll probably want to add services like DNS, web, mail, proxy, file
+sharing, directory services, etc. The respective `services` subdirectories
+provide template stubs for the most common services, which you can copy and
+paste into the script. 
 
 Start the firewall:
 
