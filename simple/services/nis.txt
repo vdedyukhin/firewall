@@ -1,0 +1,17 @@
+  # RPC
+  iptables --append INPUT --protocol tcp --in-interface ${IFACE_LAN} \
+    --dport 111 --jump ACCEPT
+  iptables --append INPUT --protocol udp --in-interface ${IFACE_LAN} \
+    --dport 111 --jump ACCEPT
+
+  # NIS
+  iptables --append INPUT --protocol tcp --in-interface ${IFACE_LAN} \
+    --dport 944 --jump ACCEPT
+  iptables --append INPUT --protocol udp --in-interface ${IFACE_LAN} \
+    --dport 944 --jump ACCEPT
+  iptables --append INPUT --protocol tcp --in-interface ${IFACE_LAN} \
+    --dport 945 --jump ACCEPT
+  iptables --append INPUT --protocol udp --in-interface ${IFACE_LAN} \
+    --dport 945 --jump ACCEPT
+  iptables --append INPUT --protocol udp --in-interface ${IFACE_LAN} \
+    --dport 946 --jump ACCEPT

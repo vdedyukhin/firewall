@@ -1,0 +1,3 @@
+  # Iperf
+  iptables --append INPUT --protocol tcp --in-interface ${IFACE_LAN} \
+    --dport 5201 --jump ACCEPT

@@ -1,0 +1,6 @@
+  # HTTP 
+  iptables --append INPUT --protocol tcp --in-interface ${IFACE_LAN} \
+    --dport 80 --jump ACCEPT
+  # HTTPS 
+  iptables --append INPUT --protocol tcp --in-interface ${IFACE_LAN} \
+    --dport 443 --jump ACCEPT

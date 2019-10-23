@@ -1,0 +1,12 @@
+  # SMTP
+  iptables --append INPUT --protocol tcp --in-interface ${IFACE_INET} \
+    --dport 25 --jump ACCEPT
+  # IMAP 
+  iptables --append INPUT --protocol tcp --in-interface ${IFACE_INET} \
+    --dport 143 --jump ACCEPT
+  # SMTPS 
+  iptables --append INPUT --protocol tcp --in-interface ${IFACE_INET} \
+    --dport 465 --jump ACCEPT
+  # IMAPS 
+  iptables --append INPUT --protocol tcp --in-interface ${IFACE_INET} \
+    --dport 993 --jump ACCEPT

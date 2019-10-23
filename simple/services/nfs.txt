@@ -1,0 +1,3 @@
+  # NFS
+  iptables --append INPUT --protocol tcp --in-interface ${IFACE_LAN} \
+    --dport 2049 --jump ACCEPT

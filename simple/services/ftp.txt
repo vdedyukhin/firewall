@@ -1,0 +1,6 @@
+  # FTP
+  modprobe ip_conntrack_ftp
+  iptables --append INPUT --protocol tcp --in-interface ${IFACE_LAN} \
+    --dport 21 --jump ACCEPT
+  iptables --append INPUT --protocol tcp --in-interface ${IFACE_LAN} \
+    --dport 50001:50010 --jump ACCEPT

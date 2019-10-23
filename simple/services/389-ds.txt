@@ -1,0 +1,6 @@
+  # LDAP
+  iptables --append INPUT --protocol tcp --in-interface ${IFACE_LAN} \
+    --dport 389 --jump ACCEPT
+  # LDAPS
+  iptables --append INPUT --protocol tcp --in-interface ${IFACE_LAN} \
+    --dport 636 --jump ACCEPT

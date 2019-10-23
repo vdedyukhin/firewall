@@ -1,0 +1,3 @@
+  # Xibo
+  iptables --append INPUT --protocol tcp --in-interface ${IFACE_INET} \
+    --dport 9505 --jump ACCEPT

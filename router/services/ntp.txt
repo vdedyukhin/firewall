@@ -1,0 +1,3 @@
+  # NTP
+  iptables --append INPUT --protocol udp --in-interface ${IFACE_LAN} \
+    --dport 123 --jump ACCEPT

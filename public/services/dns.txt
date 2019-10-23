@@ -1,0 +1,5 @@
+  # DNS
+  iptables --append INPUT --protocol tcp --in-interface ${IFACE_INET} \
+    --dport 53 --jump ACCEPT
+  iptables --append INPUT --protocol udp --in-interface ${IFACE_INET} \
+    --dport 53 --jump ACCEPT

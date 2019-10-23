@@ -1,0 +1,19 @@
+  # Squid 
+  iptables --append INPUT --protocol tcp --in-interface ${IFACE_LAN} \
+    --dport 3128 --jump ACCEPT
+  iptables --append INPUT --protocol udp --in-interface ${IFACE_LAN} \
+    --dport 3128 --jump ACCEPT
+  iptables --append PREROUTING --table nat --in-interface ${IFACE_LAN} \
+    --protocol tcp ! --destination ${ROUTER_IP} \
+    --dport 80 --jump REDIRECT --to-port 3128
+  iptables --append INPUT --protocol tcp --in-interface ${IFACE_LAN} \
+    --dport 3129 --jump ACCEPT
+  iptables --append INPUT --protocol udp --in-interface ${IFACE_LAN} \
+    --dport 3129 --jump ACCEPT
+  iptables --append PREROUTING --table nat --in-interface ${IFACE_LAN} \
+    --protocol tcp ! -d ${ROUTER_IP} \
+    --dport 443 --jump REDIRECT --to-port 3129
+  iptables --append INPUT --protocol tcp --in-interface ${IFACE_LAN} \
+    --dport 3130 --jump ACCEPT
+  iptables --append INPUT --protocol udp --in-interface ${IFACE_LAN} \
+    --dport 3130 --jump ACCEPT

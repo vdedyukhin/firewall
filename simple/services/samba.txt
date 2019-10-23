@@ -1,0 +1,7 @@
+  # Samba
+  iptables --append INPUT --protocol udp --in-interface ${IFACE_LAN} \
+    --dport 137:138 --jump ACCEPT
+  iptables --append INPUT --protocol tcp --in-interface ${IFACE_LAN} \
+    --dport 139 --jump ACCEPT
+  iptables --append INPUT --protocol tcp --in-interface ${IFACE_LAN} \
+    --dport 445 --jump ACCEPT
